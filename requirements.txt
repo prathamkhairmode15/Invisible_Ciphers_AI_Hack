@@ -1,0 +1,14 @@
+transformers
+torch
+accelerate
+huggingface_hub
+python-dotenv
+bitsandbytes
+requests
+pandas
+PyPDF2
+python-docx
+pytesseract
+Pillow
+peft
+trl

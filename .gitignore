@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Models & Large Files
+shield_model_finetuned/
+*.bin
+*.pt
+*.safetensors
+checkpoint-*/
+
+# Environment & Secrets
+.env
+.huggingface/
+
+# OS specific
+.DS_Store
+Thumbs.db
