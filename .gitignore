@@ -1,23 +1,37 @@
+# Dependencies
+node_modules/
+Frontend/cipher_chatbot/node_modules/
+Frontend/cipher_dashboard/node_modules/
+
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
-.venv/
-env/
-venv/
-ENV/
+*.pyc
+Backend/.venv/
+Backend/venv/
+*.egg-info/
 
-# Models & Large Files
-shield_model_finetuned/
-*.bin
-*.pt
-*.safetensors
-checkpoint-*/
+# Model cache (too large for git)
+Backend/*.bin
+Backend/*.safetensors
 
-# Environment & Secrets
+# Database (local state)
+Backend/aishield.db
+
+# Environment
 .env
-.huggingface/
+*.env
 
-# OS specific
+# IDE
+.vscode/
+.idea/
+
+# OS
 .DS_Store
 Thumbs.db
+
+# Logs
+Backend/shield_logs.jsonl
+
+# Build
+Frontend/cipher_chatbot/dist/
+Frontend/cipher_dashboard/dist/

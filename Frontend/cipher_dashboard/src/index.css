@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--bg-main);
+  --color-foreground: var(--text-main);
+  --color-primary: var(--brand-primary);
+  --color-danger: var(--brand-danger);
+  --color-secondary: var(--bg-card);
+  --color-accent: var(--bg-accent);
+  
+  --font-display: "Chakra Petch", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --animate-fade-in: fadeIn 0.3s ease-out;
+  --animate-slide-up: slideUp 0.4s ease-out;
+  --animate-pulse-slow: pulseSlow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes slideUp {
+    0% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes pulseSlow {
+    0%, 100% { opacity: 1; filter: brightness(1); }
+    50% { opacity: 0.8; filter: brightness(1.2); }
+  }
+}
+
+:root {
+  /* Dark Theme (Default) */
+  --bg-main: #000000;
+  --bg-card: #0f172a;
+  --bg-accent: #1e293b;
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --brand-primary: #22c55e;
+  --brand-danger: #ef4444;
+  --border-subtle: #1e293b;
+}
+
+:root.light {
+  /* Light Theme */
+  --bg-main: #ffffff;
+  --bg-card: #f1f5f9;
+  --bg-accent: #e2e8f0;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --brand-primary: #16a34a;
+  --brand-danger: #dc2626;
+  --border-subtle: #e2e8f0;
+}
+
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased font-body;
+  }
+  
+  h1, h2, h3, h4, .status-label {
+    @apply font-display tracking-tight text-foreground;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-700/50 rounded-full;
+}
+
+.glow-text-primary {
+  text-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.glow-text-danger {
+  text-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+.light .glow-text-primary {
+  text-shadow: none;
+}
