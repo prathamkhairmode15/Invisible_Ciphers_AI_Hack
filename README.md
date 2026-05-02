@@ -1,4 +1,4 @@
-🔐 AI Shield – Secure LLM Chatbot with Prompt Injection Defense
+🔐 Cipher AI– Secure LLM Chatbot with Prompt Injection Defense
 
 AI Shield is a secure AI chatbot system that protects Large Language Models (LLMs) from malicious inputs such as prompt injection, jailbreak attempts, and adversarial attacks. It integrates a React frontend with a Python backend powered by a LLaMA-based model.
 
